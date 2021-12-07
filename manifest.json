@@ -25,13 +25,15 @@
 
   "content_scripts": [
     {
-      "matches": ["https://www.youtube.com/*"],
+      "matches": ["*://*.youtube.com/*"],
       "js": ["contentScript.js"]
     }
   ],
 
   "permissions": [
-    "background",
-    "activeTab"
+    "tabs",
+    "activeTab",
+    "*://*.youtube.com/*",
+    "background"
   ]
 }
